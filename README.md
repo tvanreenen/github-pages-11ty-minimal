@@ -59,10 +59,6 @@ The site is automatically built and deployed to GitHub Pages when you push to th
 - [Simple.css](https://simplecss.org) - Minimal CSS framework
 - [GitHub Pages](https://pages.github.com/) - Hosting
 
-## License
-
-MIT
-
 ---
 
 For a more feature-rich Eleventy blog template, check out [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog).
