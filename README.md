@@ -6,16 +6,16 @@ A minimal, opinionated template for creating a blog with [Eleventy](https://www.
 
 - 🚀 Simple setup with minimal dependencies
 - 📝 Markdown-based blog posts
-- 🌓 Automatic light/dark mode support with [Simple.css](https://simplecss.org)
 - 🎨 Clean, readable typography and layout
-- 🔄 Automatic GitHub Pages deployment
 - 📱 Responsive design
+- 🌓 Automatic light/dark mode support with [Simple.css](https://simplecss.org)
+- 🔄 Automatic GitHub Pages deployment
 
 ## Getting Started
 
 1. Click "Use this template" to create a new repository
 2. Clone your new repository
-3. Create your first post in `posts/article-title/index.md`
+3. Create your first post in `posts/post-title/index.md`
 4. Test locally with `npx @11ty/eleventy --serve`
 5. Push to GitHub - your site will be automatically built and deployed
 
@@ -24,7 +24,7 @@ A minimal, opinionated template for creating a blog with [Eleventy](https://www.
 ```
 .
 ├── _includes/         # Layout templates
-├── posts/            # Blog posts (article-title/index.md)
+├── posts/            # Blog posts (post-title/index.md)
 ├── .eleventy.js      # Eleventy configuration
 ├── .github/          # GitHub Actions workflow
 └── index.html        # Homepage
@@ -32,7 +32,7 @@ A minimal, opinionated template for creating a blog with [Eleventy](https://www.
 
 ## Writing Posts
 
-Create a new post by adding a markdown file at `posts/article-title/index.md`:
+Create a new post by adding a markdown file at `posts/post-title/index.md`:
 
 ```markdown
 ---
@@ -45,9 +45,9 @@ Your post content here...
 
 ## Customization
 
-- Edit `_includes/layout.html` to modify the site structure
-- Posts are organized by article paths/titles in the `posts` directory
-- The homepage automatically lists all posts in reverse chronological order
+- Customerize the site structure by modifying `_includes/layout.html`.
+- Customize Simple.css by adding your own CSS rules in the separate stylesheet. See the [Simple.css customization guide](https://github.com/kevquirk/simple.css/wiki/Getting-Started-With-Simple.css#customise-simplecss) for more details.
+- Explore Eleventy's many other customization options in their [official documentation](https://www.11ty.dev/docs/)
 
 ## Deployment
 
