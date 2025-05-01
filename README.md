@@ -1,6 +1,6 @@
 # Minimal Eleventy Blog Template
 
-A minimal, opinionated template for creating a blog with [Eleventy](https://www.11ty.dev/) and deploying to GitHub Pages.
+A minimal, opinionated template for creating a blog with [Eleventy](https://www.11ty.dev/) and deploying to GitHub or Cloudflare Pages.
 
 ## Features
 
