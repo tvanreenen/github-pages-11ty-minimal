@@ -1,15 +1,6 @@
-# Minimal Eleventy Blog Template
+# Minimal Static Site Blog Template
 
-A minimal, opinionated template for creating a blog with [Eleventy](https://www.11ty.dev/) and deploying to GitHub or Cloudflare Pages.
-
-## Features
-
-- 🚀 Simple setup with minimal dependencies
-- 📝 Markdown-based blog posts
-- 🎨 Clean, readable typography and layout
-- 📱 Responsive design
-- 🌓 Automatic light/dark mode support with [Simple.css](https://simplecss.org)
-- 🔄 Automatic GitHub Pages deployment
+A minimal, opinionated template for creating a blog using [Eleventy](https://www.11ty.dev/) as the static site generator and deploying to [GitHub Page](https://pages.github.com/) or [Cloudflare Pages](https://pages.cloudflare.com/).
 
 ## Getting Started
 
@@ -23,7 +14,8 @@ A minimal, opinionated template for creating a blog with [Eleventy](https://www.
 
 ```
 .
-├── _includes/         # Layout templates
+├── _includes/        # Layout templates
+├── css/              # Custom stylesheets
 ├── posts/            # Blog posts (post-title/index.md)
 ├── .eleventy.js      # Eleventy configuration
 ├── .github/          # GitHub Actions workflow
@@ -32,7 +24,7 @@ A minimal, opinionated template for creating a blog with [Eleventy](https://www.
 
 ## Writing Posts
 
-Create a new post by adding a markdown file at `posts/post-title/index.md`:
+This configuration of 11ty is setup as a simple blog roll where each post is self-contained in its own directory (the markdown and any assests). The folder name will be the URL slug (`posts/my-post/index.md` -> `site.com/my-post`). The YAML frontmatter controls the title and any othe details you want to include in the list view. 
 
 ```markdown
 ---
@@ -43,22 +35,21 @@ date: 2024-01-01
 Your post content here...
 ```
 
-## Customization
+## Customizing
 
-- Customerize the site structure by modifying `_includes/layout.html`.
-- Customize Simple.css by adding your own CSS rules in the separate stylesheet. See the [Simple.css customization guide](https://github.com/kevquirk/simple.css/wiki/Getting-Started-With-Simple.css#customise-simplecss) for more details.
+- Include the CSS of your choice directly in the `HEAD` or in the `css/` folder. It should implement the semantic HTML equivalent to markdown using class-less style. Simple.css is included as a starter framework. See the [Simple.css customization guide](https://github.com/kevquirk/simple.css/wiki/Getting-Started-With-Simple.css#customise-simplecss) for more details.
+- Customize the site structure by modifying any of the files in `_includes/`.
 - Explore Eleventy's many other customization options in their [official documentation](https://www.11ty.dev/docs/)
 
 ## Deployment
 
-The site is automatically built and deployed to GitHub Pages when you push to the `main` branch.
-
-## Credits
-
-- [Eleventy](https://www.11ty.dev/) - Static site generator
-- [Simple.css](https://simplecss.org) - Minimal CSS framework
-- [GitHub Pages](https://pages.github.com/) - Hosting
+- To automatically deploy on GitHub Pages
+  - Follow https://docs.github.com/en/pages/quickstart
+  - Rename `.github/workflows/deploy.yml.example` to `.github/workflows/deploy.yml`
+- To deploy to Cloudflare Pages:
+  - Follow https://developers.cloudflare.com/pages/get-started/git-integration/
+- When you push to the `main` branch, the site will be built in the `_site` directory and deployed automatically.
 
 ---
 
-For a more feature-rich Eleventy blog template, check out [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog).
+This was inspred by the more feature-rich [11ty/eleventy-base-blog](https://github.com/11ty/eleventy-base-blog), but with a minimal setup in mind.
